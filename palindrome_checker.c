@@ -1,24 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    //memory size = 8bytes; accepts chars of lengths up to 20
-    unsigned long num, original, reversed = 0, remainder;
+    // unsigned long stores non-negative integers (up to ~20 digits on 64-bit systems)
+    unsigned long num, reversed = 0, temp;
 
     printf("Enter a number: ");
     scanf("%lu", &num);
 
-    original = num;
+    temp = num;
 
-    while (num != 0) {
-        remainder = num % 10;
-        reversed = reversed * 10 + remainder;
-        num = num / 10;
+    while (temp) {
+        reversed = reversed * 10 + temp % 10;
+        temp /= 10;
     }
 
-    if (original == reversed) {
-        printf("%lu is a palindrome.\n", original);
+    if (num == reversed) {
+        printf("%lu is a palindrome.\n", num);
     } else {
-        printf("%lu is not a palindrome.\n", original);
+        printf("%lu is not a palindrome.\n", num);
     }
 
     return 0;
