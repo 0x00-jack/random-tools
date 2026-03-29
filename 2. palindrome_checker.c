@@ -9,7 +9,7 @@ int main() {
 
     temp = num;
 
-    while (temp) {
+    while (temp != 0 ) {
         reversed = reversed * 10 + temp % 10;
         temp /= 10;
     }
