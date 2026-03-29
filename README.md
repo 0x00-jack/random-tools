@@ -1,6 +1,6 @@
 # 1. RIGHT-ANGLE CHECKER  
 
-# a. PSEUDOCODE
+## a. PSEUDOCODE
 
 ```Start
 
@@ -30,9 +30,42 @@ End if
 Stop
 ```
 
-# b. FLOWCHART
+## b. FLOWCHART
 
 <img width="1322" height="1244" alt="1_flow" src="https://github.com/user-attachments/assets/aab49557-d9f8-447d-b9aa-cd237de95154" />
 
 ---
+
+
+# 2. PALINDROME CHECKER
+
+## a. PSEUDOCODE
+
+```Start
+
+Declare num, reversed, temp as unsigned long
+Set reversed = 0
+
+Display "Enter a number"
+Input num
+
+Set temp = num
+
+While temp != 0 do
+    Set reversed = (reversed × 10) + (temp mod 10)
+    Set temp = temp ÷ 10   // integer division
+End While
+
+If num = reversed then
+    Display "Number is a palindrome"
+Else
+    Display "Number is not a palindrome"
+End If
+
+Stop
+```
+
+## b. FLOWCHART
+
+<img width="1137" height="1273" alt="image" src="https://github.com/user-attachments/assets/107f334e-2b52-4f90-9e76-0097139228c6" />
 
